@@ -1,5 +1,6 @@
 package io.github.thepoultryman.charmsnhexes;
 
+import io.github.thepoultryman.charmsnhexes.registry.HexRegistry;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -12,5 +13,7 @@ public class CharmsAndHexes implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Quilting Charms and Hexes");
+
+        HexRegistry.registerHexes();
 	}
 }
