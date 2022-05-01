@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HexRegistry {
-    public static final List<Hex> HEXES = new ArrayList<>();
+    public static final List<String> HEXES = new ArrayList<>();
 
     public static Hex BLOODY_DAMAGE;
 
@@ -18,7 +18,7 @@ public class HexRegistry {
     }
 
     private static Hex register(String name, Hex hex) {
-        HEXES.add(hex);
+        HEXES.add(name);
         return Registry.register(Registry.ENCHANTMENT, new Identifier(CharmsAndHexes.MOD_ID, name), hex);
     }
 }
