@@ -1,6 +1,5 @@
 package io.github.thepoultryman.charmsnhexes.hex.hexes;
 
-import io.github.thepoultryman.charmsnhexes.CharmsAndHexes;
 import io.github.thepoultryman.charmsnhexes.hex.Hex;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
