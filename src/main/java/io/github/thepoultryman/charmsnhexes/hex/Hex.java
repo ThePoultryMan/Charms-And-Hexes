@@ -8,4 +8,9 @@ public class Hex extends Enchantment {
     public Hex(EnchantmentTarget enchantmentTarget, EquipmentSlot[] equipmentSlots) {
         super(Rarity.RARE, enchantmentTarget, equipmentSlots);
     }
+
+    @Override
+    public boolean isTreasure() {
+        return true;
+    }
 }
