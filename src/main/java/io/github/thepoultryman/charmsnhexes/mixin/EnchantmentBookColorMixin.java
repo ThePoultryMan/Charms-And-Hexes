@@ -1,6 +1,5 @@
 package io.github.thepoultryman.charmsnhexes.mixin;
 
-import io.github.thepoultryman.charmsnhexes.CharmsAndHexes;
 import io.github.thepoultryman.charmsnhexes.registry.HexRegistry;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.item.EnchantedBookItem;
