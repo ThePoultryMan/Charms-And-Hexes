@@ -1,7 +1,7 @@
 package io.github.thepoultryman.charmsnhexes.registry;
 
 import io.github.thepoultryman.charmsnhexes.CharmsAndHexes;
-import io.github.thepoultryman.charmsnhexes.Hex;
+import io.github.thepoultryman.charmsnhexes.hex.hexes.BloodyDamage;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -11,14 +11,16 @@ import java.util.List;
 public class HexRegistry {
     public static final List<String> HEXES = new ArrayList<>();
 
-    public static Hex BLOODY_DAMAGE;
+    public static BloodyDamage BLOODY_DAMAGE;
 
     public static void registerHexes() {
-        BLOODY_DAMAGE = register("bloody_damage", new Hex());
+        BLOODY_DAMAGE = Registry.register(Registry.ENCHANTMENT, new Id("bloody_damage"), new BloodyDamage());
     }
 
-    private static Hex register(String name, Hex hex) {
-        HEXES.add(name);
-        return Registry.register(Registry.ENCHANTMENT, new Identifier(CharmsAndHexes.MOD_ID, name), hex);
+    private static class Id extends Identifier {
+        public Id(String name) {
+            super(CharmsAndHexes.MOD_ID, name);
+            HEXES.add(name);
+        }
     }
 }
