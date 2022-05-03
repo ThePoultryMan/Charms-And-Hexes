@@ -28,7 +28,7 @@ public abstract class ItemStackNameMixin {
                 for (String hexName : HexRegistry.HEXES) {
                     if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
                         cir.setReturnValue(new TranslatableText(UniversalUtil.getHexTranslationKey(hexName)).append(" ")
-                            .append(new TranslatableText("charm.name")).formatted(Formatting.DARK_PURPLE));
+                            .append(new TranslatableText("hex.name")).formatted(Formatting.DARK_PURPLE));
                     }
                 }
 
