@@ -10,8 +10,6 @@ import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.damage.DamageSource;
 
 public class GiantSlayer extends Charm {
-
-
     public GiantSlayer() {
         super(EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND}, "giant_slayer");
     }
