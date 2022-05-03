@@ -25,10 +25,10 @@ public class HealingGrasp extends Charm {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         switch (level)  {
-            case 1 -> user.heal(1.5f);
-            case 2 -> user.heal(2f);
-            case 3 -> user.heal(3f);
-            default -> user.heal((level + (level * 0.25f)));
+            case 1 -> user.heal(0.5f);
+            case 2 -> user.heal(1f);
+            case 3 -> user.heal(2f);
+            default -> user.heal((level / 2f) + (level * 0.25f));
         }
     }
 }
