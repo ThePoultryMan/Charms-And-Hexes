@@ -25,17 +25,17 @@ public abstract class ItemStackNameMixin {
         ItemStack currentStack = ((ItemStack)(Object)this);
         if (currentStack.getItem() instanceof EnchantedBookItem)
             if (!EnchantedBookItem.getEnchantmentNbt(currentStack).isEmpty()) {
-                for (String hexName : HexRegistry.HEXES) {
-                    if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
-                        cir.setReturnValue(new TranslatableText(UniversalUtil.getHexTranslationKey(hexName)).append(" ")
-                            .append(new TranslatableText("hex.name")).formatted(Formatting.DARK_PURPLE));
-                    }
-                }
-
                 for (String charmName : CharmRegistry.CHARMS) {
                     if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(charmName)) {
                         cir.setReturnValue(new TranslatableText(UniversalUtil.getCharmTranslationKey(charmName)).append(" ")
                             .append(new TranslatableText("charm.name")).formatted(Formatting.GREEN));
+                    }
+                }
+
+                for (String hexName : HexRegistry.HEXES) {
+                    if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
+                        cir.setReturnValue(new TranslatableText(UniversalUtil.getHexTranslationKey(hexName)).append(" ")
+                            .append(new TranslatableText("hex.name")).formatted(Formatting.DARK_PURPLE));
                     }
                 }
             }
