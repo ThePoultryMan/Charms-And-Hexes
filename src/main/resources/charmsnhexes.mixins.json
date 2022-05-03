@@ -4,7 +4,7 @@
   "package": "io.github.thepoultryman.charmsnhexes.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "EnchantmentBookInGameHudMixin"
+    "ItemStackNameMixin"
   ],
   "client": [],
   "injectors": {
