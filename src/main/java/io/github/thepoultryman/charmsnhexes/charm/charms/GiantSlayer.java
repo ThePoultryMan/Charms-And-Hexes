@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
+import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.damage.DamageSource;
 
 public class GiantSlayer extends Charm {
@@ -18,6 +19,8 @@ public class GiantSlayer extends Charm {
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof WitherEntity) {
             target.damage(DamageSource.MAGIC, UniversalUtil.getRandom().nextFloat(level * 2.5f));
+        } else if (target instanceof EnderDragonEntity) {
+            target.damage(DamageSource.MAGIC, UniversalUtil.getRandom().nextFloat(level * 2.25f));
         } else if (target instanceof LivingEntity livingEntity) {
             switch (level) {
                 case 1, 2 -> livingEntity.heal(level);
