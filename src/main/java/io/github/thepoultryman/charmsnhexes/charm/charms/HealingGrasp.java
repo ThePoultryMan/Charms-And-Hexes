@@ -14,7 +14,12 @@ public class HealingGrasp extends Charm {
 
     @Override
     public float getAttackDamage(int level, EntityGroup group) {
-        return (float) -(Math.pow(0.5f, (level - 2)) + 1);
+        return switch (level) {
+            case 1 -> -3f;
+            case 2 -> -2f;
+            case 3 -> -1.5f;
+            default -> (-1.5f + (level * 0.07f));
+        };
     }
 
     @Override
