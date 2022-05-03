@@ -10,7 +10,7 @@ import net.minecraft.entity.damage.DamageSource;
 
 public class BloodyDamage extends Hex {
     public BloodyDamage() {
-        super(EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+        super(EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND}, "bloody_damage");
     }
 
     @Override

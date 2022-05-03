@@ -6,7 +6,6 @@ import io.github.thepoultryman.charmsnhexes.registry.HexRegistry;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
@@ -25,8 +24,8 @@ public class EnchantmentBookInGameHudMixin {
         if (!EnchantedBookItem.getEnchantmentNbt(currentStack).isEmpty()) {
             for (String hexName : HexRegistry.HEXES) {
                 if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
-                    mutableText = new LiteralText("").append("Hex");
-                    return mutableText.formatted(Formatting.RED);
+                    return new TranslatableText(UniversalUtil.getHexTranslationKey(hexName)).append(" ")
+                        .append(new TranslatableText("charm.name")).formatted(Formatting.RED);
                 }
             }
 
