@@ -1,6 +1,7 @@
 {
   "charm.name": "Charm",
   "charm.name.healing_grasp": "Healing Grasp",
+  "charm.name.giant_slayer": "Giant Slayer",
   "hex.name": "Hex",
   "hex.name.bloody_damage": "Bloody Damage",
   "hex.name.shocking_blade": "Shocking Blade"

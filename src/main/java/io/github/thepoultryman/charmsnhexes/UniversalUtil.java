@@ -3,7 +3,11 @@ package io.github.thepoultryman.charmsnhexes;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
 
+import java.util.Random;
+
 public class UniversalUtil {
+    private static final Random random = new Random();
+
     public static String getCharmTranslationKey(String name) {
         return "charm.name." + name;
     }
@@ -20,5 +24,9 @@ public class UniversalUtil {
     public static boolean isHex(ItemStack itemStack, String hexName) {
         return itemStack.getItem() instanceof EnchantedBookItem
             && EnchantedBookItem.getEnchantmentNbt(itemStack).get(0).asString().contains(hexName);
+    }
+
+    public static Random getRandom() {
+        return random;
     }
 }
