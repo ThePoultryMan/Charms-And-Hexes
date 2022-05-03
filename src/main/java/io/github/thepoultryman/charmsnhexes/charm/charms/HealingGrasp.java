@@ -31,4 +31,9 @@ public class HealingGrasp extends Charm {
             default -> user.heal((level / 2f) + (level * 0.25f));
         }
     }
+
+    @Override
+    public int getMaxLevel() {
+        return 3;
+    }
 }
