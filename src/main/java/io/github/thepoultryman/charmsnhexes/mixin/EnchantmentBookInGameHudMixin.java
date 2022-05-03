@@ -20,7 +20,7 @@ public class EnchantmentBookInGameHudMixin {
     private ItemStack currentStack;
 
     @ModifyVariable(at = @At("STORE"), method = "renderHeldItemTooltip", ordinal = 0)
-    public MutableText changeEnchantmentBookColor(MutableText mutableText) {
+    public MutableText charmsnhexes$changeEnchantmentBookColor(MutableText mutableText) {
         if (!EnchantedBookItem.getEnchantmentNbt(currentStack).isEmpty()) {
             for (String hexName : HexRegistry.HEXES) {
                 if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
