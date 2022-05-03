@@ -9,7 +9,7 @@ import net.minecraft.entity.LivingEntity;
 
 public class HealingGrasp extends Charm {
     public HealingGrasp() {
-        super(EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+        super(EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND}, "healing_grasp");
     }
 
     @Override

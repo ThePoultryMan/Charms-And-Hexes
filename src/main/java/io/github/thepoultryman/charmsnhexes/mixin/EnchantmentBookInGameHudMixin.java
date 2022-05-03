@@ -1,11 +1,14 @@
 package io.github.thepoultryman.charmsnhexes.mixin;
 
+import io.github.thepoultryman.charmsnhexes.UniversalUtil;
+import io.github.thepoultryman.charmsnhexes.registry.CharmRegistry;
 import io.github.thepoultryman.charmsnhexes.registry.HexRegistry;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.item.EnchantedBookItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.MutableText;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -13,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(InGameHud.class)
-public class EnchantmentBookColorMixin {
+public class EnchantmentBookInGameHudMixin {
     @Shadow
     private ItemStack currentStack;
 
@@ -24,6 +27,13 @@ public class EnchantmentBookColorMixin {
                 if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
                     mutableText = new LiteralText("").append("Hex");
                     return mutableText.formatted(Formatting.RED);
+                }
+            }
+
+            for (String charmName : CharmRegistry.CHARMS) {
+                if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(charmName)) {
+                    return new TranslatableText(UniversalUtil.getCharmTranslationKey(charmName)).append(" ")
+                        .append(new TranslatableText("charm.name")).formatted(Formatting.BLUE);
                 }
             }
         }
