@@ -25,14 +25,14 @@ public class EnchantmentBookInGameHudMixin {
             for (String hexName : HexRegistry.HEXES) {
                 if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(hexName)) {
                     return new TranslatableText(UniversalUtil.getHexTranslationKey(hexName)).append(" ")
-                        .append(new TranslatableText("charm.name")).formatted(Formatting.RED);
+                        .append(new TranslatableText("charm.name")).formatted(Formatting.DARK_PURPLE);
                 }
             }
 
             for (String charmName : CharmRegistry.CHARMS) {
                 if (EnchantedBookItem.getEnchantmentNbt(currentStack).get(0).asString().contains(charmName)) {
                     return new TranslatableText(UniversalUtil.getCharmTranslationKey(charmName)).append(" ")
-                        .append(new TranslatableText("charm.name")).formatted(Formatting.BLUE);
+                        .append(new TranslatableText("charm.name")).formatted(Formatting.GREEN);
                 }
             }
         }
