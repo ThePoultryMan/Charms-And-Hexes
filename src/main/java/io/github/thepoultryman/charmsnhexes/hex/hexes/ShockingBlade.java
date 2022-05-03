@@ -7,6 +7,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class ShockingBlade extends Hex {
+    private boolean hackyCodeStopper = false;
+
     public ShockingBlade() {
         super(EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND}, "shocking_blade");
     }
@@ -14,7 +16,8 @@ public class ShockingBlade extends Hex {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         World world = target.getWorld();
-        if (!world.isClient()) {
+        hackyCodeStopper = !hackyCodeStopper;
+        if (!world.isClient() && !hackyCodeStopper) {
             LightningEntity lightningEntity = EntityType.LIGHTNING_BOLT.create(world);
             lightningEntity.refreshPositionAfterTeleport(Vec3d.ofBottomCenter(target.getBlockPos()));
             world.spawnEntity(lightningEntity);
