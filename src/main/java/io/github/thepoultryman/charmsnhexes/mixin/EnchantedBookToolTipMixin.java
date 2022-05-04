@@ -1,6 +1,5 @@
 package io.github.thepoultryman.charmsnhexes.mixin;
 
-import io.github.thepoultryman.charmsnhexes.CharmsAndHexes;
 import io.github.thepoultryman.charmsnhexes.UniversalUtil;
 import io.github.thepoultryman.charmsnhexes.registry.CharmRegistry;
 import io.github.thepoultryman.charmsnhexes.registry.HexRegistry;
@@ -39,7 +38,6 @@ public abstract class EnchantedBookToolTipMixin {
                     }
                 }
                 else if (HexRegistry.HEXES.contains(name)) {
-                    CharmsAndHexes.LOGGER.info("uhh");
                     tooltip.add(new LiteralText("---").formatted(Formatting.DARK_GRAY));
                     for (String descriptionLine : UniversalUtil.getHexDescription(name).split("\\n")) {
                         tooltip.add(new LiteralText(descriptionLine).formatted(Formatting.ITALIC, Formatting.GRAY));
