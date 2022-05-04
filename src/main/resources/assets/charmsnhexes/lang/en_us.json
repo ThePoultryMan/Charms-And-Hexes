@@ -1,8 +1,12 @@
 {
   "charm.name": "Charm",
   "charm.name.healing_grasp": "Healing Grasp",
+  "charm.description.healing_grasp": "Heals the user but reduces the\ndamage dealt to the target. The\ndamage reduction goes down each\nlevel, and the healing amount\ngoes up.",
   "charm.name.giant_slayer": "Giant Slayer",
+  "charm.description.giant_slayer": "The user deals more damage to\nbosses, but it slightly heals\nnormal enemies. The extra damage\ndealt to bosses increases with\nlevel, but the amount that regular\nenemies are healed goes down\neach level.",
   "hex.name": "Hex",
   "hex.name.bloody_damage": "Bloody Damage",
-  "hex.name.shocking_blade": "Shocking Blade"
+  "hex.description.bloody_damage": "Extra damage will be dealt to\nthe target, but damage will be\ndealt back to the player. The\nhigher the level, the more\nextra damage is dealt, and a\nlower amount of damage is dealt\nback to the player.",
+  "hex.name.shocking_blade": "Shocking Blade",
+  "hex.description.shocking_blade": "Summons a lightning bolt at the\ntarget's position when the\ntarget is hit. The second level\nof the enchantment gives the\nuser fire resistance for three\nseconds when they hit their\ntarget."
 }
