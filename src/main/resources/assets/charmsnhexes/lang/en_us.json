@@ -8,5 +8,7 @@
   "hex.name.bloody_damage": "Bloody Damage",
   "hex.description.bloody_damage": "Extra damage will be dealt to\nthe target, but damage will be\ndealt back to the player. The\nhigher the level, the more\nextra damage is dealt, and a\nlower amount of damage is dealt\nback to the player.",
   "hex.name.shocking_blade": "Shocking Blade",
-  "hex.description.shocking_blade": "Summons a lightning bolt at the\ntarget's position when the\ntarget is hit. The second level\nof the enchantment gives the\nuser fire resistance for three\nseconds when they hit their\ntarget."
+  "hex.description.shocking_blade": "Summons a lightning bolt at the\ntarget's position when the\ntarget is hit. The second level\nof the enchantment gives the\nuser fire resistance for three\nseconds when they hit their\ntarget.",
+  "hex.name.poisonous_speed": "Poisonous Speed",
+  "hex.description.poisonous_speed": "The user's tool will get the\nequivalent level of efficiency,\nbut when they use the tool to\nattack, they will be inflicted\nwith poison. The amount of time\nthey have poison decreases with\nevery level."
 }
